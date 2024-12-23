@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #000080;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000080;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    color: white;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li {
+    display: inline;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar nav ul li a.buy-now,
+.navbar nav ul li a.be-member {
+    background-color: #ffcc00;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.genre-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.genre-buttons button {
+    background-color: #000080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.books-section {
+    padding: 20px;
+}
+
+.books-section h2 {
+    text-align: center
+}

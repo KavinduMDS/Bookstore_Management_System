@@ -1,0 +1,306 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    margin-bottom: 20px;
+    background-color: #3b0581;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.navbar-brand h1 {
+    color: white;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #d1e7dd;
+    text-decoration: underline;
+}
+
+.register-btn {
+    background-color: white;
+    color: #111011;
+    border: 1px solid #6409f7;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    padding: 5px 10px;
+}
+
+.register-btn:hover {
+    background-color: #d1e7dd;
+}
+
+/* Ensures login and register items are on the right */
+.ml-auto {
+    margin-left: auto !important;
+}
+.buy-now-btn {
+    background-color: #3b0581; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    font-weight: bold; 
+    transition: background-color 0.3s; 
+}
+.buy-now-btn:hover {
+    background-color: #5c1fa1; 
+}
+.content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 20px; 
+}
+.left-content {
+    text-align: left; /
+}
+.right-content {
+    display: flex;
+    justify-content: flex-end; 
+}
+.right-content img {
+    width: 100px; 
+    margin-left: 10px; 
+}
+@media (max-width: 768px) {
+    .navbar {
+        margin-bottom: 10px; 
+    }
+    .content {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+    .right-content {
+        justify-content: flex-start; 
+    }
+}
+footer {
+    background-color: #3b0581; 
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
+    margin-top: 20px; /
+}
+.footer-links a {
+    color: white; 
+    margin: 0 10px; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+.footer-links a:hover {
+    color: #d1e7dd; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.gallery-item {
+    width: 250px;
+    height: 250px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+a {
+    text-decoration: none;
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; 
+    
+}
+
+/* Popup container styling */
+.popup-container {
+    background: #fff; /* White background */
+    padding: 30px;
+    width: 350px; /* Set a width for the form */
+    max-width: 90%; /* Responsive */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow */
+    text-align: center;
+    position: relative;
+}
+
+/* Form input styling */
+.popup-container .box {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Submit button */
+.popup-container .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb5b8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup-container .btn:hover {
+    background-color: #4cae4c;
+}
+
+/* Close button for later use */
+.popup-container .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    font-size: 18px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.popup-container .close-btn:hover {
+    color: #333;
+}
+
+#profile {
+    position: relative;
+}
+
+#profileImg {
+    border-radius: 50%;
+}
+
+.dropdown-content {
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: absolute;
+    width: 300px; /* Width of the container */
+    height: 200px;
+    text-align: right; 
+    padding-left: 1100px;/* Height of the container */
+}
+
+.slideshow-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease; /* Smooth transition for movement */
+}
+
+.slideshow-image:nth-child(1) {
+    transform: translateX(0%); /* Starting at position 1 */
+}
+
+.slideshow-image:nth-child(2) {
+    transform: translateX(100%); /* Starting at position 2 */
+}
+
+.slideshow-image:nth-child(3) {
+    transform: translateX(200%); /* Starting at position 3 */
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+.card {
+    height: 300px; /* Adjust this value to fit your layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-img-top {
+    height: 180px; /* Limit the image height */
+    object-fit: cover; /* Crop and center the image */
+}
+
+.card-body {
+    text-align: center;
+    padding: 10px;
+    overflow: hidden; /* Hide overflow text */
+}
+
+.card-title {
+    font-size: 1.1em;
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add '...' for overflow text */
+}
+
+
+
+
+

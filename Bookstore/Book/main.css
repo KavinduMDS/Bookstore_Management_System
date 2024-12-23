@@ -1,0 +1,237 @@
+/* General body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes width and height include padding and border */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center; /* Center items horizontally */
+    overflow-y: auto; /* Allow vertical scrolling */
+    min-height: 100vh; /* Ensure body takes full height */
+}
+
+/* Main container styling */
+.container {
+    width: 100%;
+    max-width: 700px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: center;
+    margin: 20px auto; /* Center the container */
+    min-height: 20vh; /* Give it some minimum height */
+}
+
+/* Title styling */
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0; /* Added top and bottom margin for better spacing */
+    font-weight: 600;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="submit"],
+textarea,
+option,
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    background-color: #f9f9f9; /* Light background color for inputs */
+}
+
+/* Textarea specific styles */
+textarea {
+    resize: vertical; /* Allows vertical resizing */
+    height: 100px; /* Set a default height */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #3b0581; /* Highlight color */
+    outline: none;
+}
+
+/* Placeholder styling */
+input::placeholder,
+textarea::placeholder {
+    font-size: 16px;
+    color: #888;
+}
+
+/* Submit buttons styling */
+input[type="submit"] {
+    font-size: 16px;
+    padding: 10px;
+    font-weight: 600;
+    color: white;
+    background-color: #3b0581; /* Primary color for buttons */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #5c1fa1; /* Darker shade on hover */
+}
+
+/* Additional button styling */
+input[type="submit"] + input[type="submit"] {
+    margin-left: 10px;
+}
+
+/* Search bar styling */
+form input[name="searchBook"] {
+    width: calc(100% - 100px);
+    display: inline-block;
+    margin-right: 5px;
+}
+
+form input[name="search"] {
+    width: 90px;
+    padding: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="submit"],
+    textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    form input[name="searchBook"],
+    form input[name="search"] {
+        width: 100%;
+        display: block;
+        margin: 5px 0;
+    }
+    
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td img {
+    border-radius: 4px;
+    width: 50px;
+    height: 75px;
+}
+
+.no-data {
+    color: #999;
+    font-style: italic;
+}
+.navbar {
+    background-color: #343a40; /* Dark background color */
+    padding: 1rem;
+}
+
+/* Brand styling */
+.navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Change brand color on hover */
+.navbar-brand:hover {
+    color: #ffc107; /* Gold color on hover */
+}
+
+/* Navigation links styling */
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+    font-size: 1.1em;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* Navigation links hover effect */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffc107; /* Gold color on hover */
+}
+
+/* Active navigation link */
+.navbar-nav .nav-item .active {
+    color: #ffc107; /* Gold color for the active page */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-top: 10px;
+    }
+}
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

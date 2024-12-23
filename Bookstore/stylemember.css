@@ -1,0 +1,27 @@
+body {
+   
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+.login-container {
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.login-container h5 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.form-control {
+    margin-bottom: 15px;
+}
+.alert {
+    margin-bottom: 15px;
+}

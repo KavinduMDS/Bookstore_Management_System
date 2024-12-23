@@ -1,0 +1,112 @@
+.order-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.order-container p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Table Styling */
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.order-table th, .order-table td {
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-table th {
+    background-color: #0056b3;
+    color: white;
+}
+
+.order-table tbody tr:hover {
+    background-color: #f1f5fb;
+}
+.header {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px; /* Center the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3b0581;
+    color: #fff;
+}
+
+.header h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.cart-link {
+    color: #fff;
+    font-size: 1.5em;
+    position: relative;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.cart-link:hover {
+    color: #ddd;
+}
+
+/* Cart item count styling */
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 0.8em;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy-now {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.out-of-stock {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+

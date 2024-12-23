@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #2c3e50;
+    padding: 20px;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: bold;
+    display: block;
+    padding: 12px;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bdc3c7;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.welcome span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.logout {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+    background-color: #c0392b;
+}
+
+.messages {
+    flex-grow: 1;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.messages h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1.5em;
+}
+
+.message-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: #555;
+}
+
+.message-box:hover {
+    background-color: #f0f0f0;
+}
+
+footer {
+    background-color: #34495e;
+    padding: 15px;
+    text-align: center;
+    color: #ecf0f1;
+    border-radius: 8px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}

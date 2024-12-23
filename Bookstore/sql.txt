@@ -1,0 +1,78 @@
+
+
+CREATE TABLE customer (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    address TEXT NOT NULL,
+    contact VARCHAR(15) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    photo LONGBLOB
+    
+);
+
+CREATE TABLE book (
+    bookid INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    image VARCHAR(255)
+);
+
+CREATE TABLE employee (
+    EID INT AUTO_INCREMENT PRIMARY KEY, -- Employee ID, automatically incremented
+    firstname VARCHAR(50) NOT NULL,     -- Employee's first name
+    lastname VARCHAR(50) NOT NULL,      -- Employee's last name
+    address VARCHAR(255),                -- Employee's address
+    email VARCHAR(100) UNIQUE NOT NULL,  -- Employee's email, must be unique
+    password VARCHAR(255) NOT NULL,      -- Employee's password
+    role ENUM('admin', 'order', 'inventory') NOT NULL -- Employee's role with predefined values
+);
+
+CREATE TABLE feedback (
+    fid INT AUTO_INCREMENT PRIMARY KEY,
+    subject VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    reply TEXT
+);
+
+-- Orders table to store each order's summary details
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    grand_total DECIMAL(10, 2) NOT NULL,
+    receipt VARCHAR(255),
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Order items table to store each book's details in an order
+CREATE TABLE order_items (
+    order_item_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,                     -- Foreign key linking to the orders table
+    bookid INT,                       -- Foreign key linking to the book table
+    name VARCHAR(255) NOT NULL,       -- Book name, copied from the book table
+    price DECIMAL(10, 2) NOT NULL,    -- Book price, can be copied from book table or set during checkout
+    quantity INT NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    FOREIGN KEY (bookid) REFERENCES book(book_id)
+);
+
+ALTER TABLE orders
+ADD COLUMN userid INT NOT NULL, -- Adds a column to store the customer ID
+ADD FOREIGN KEY (userid) REFERENCES customer(id);
+
+ALTER TABLE orders ADD COLUMN status VARCHAR(50) DEFAULT 'Pending';
+
+CREATE TABLE delivery (
+    delivery_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL,
+    courier_number VARCHAR(255),
+    status ENUM('delivered', 'rejected') NOT NULL,
+    reason TEXT,
+    delivery_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE
+);
+
+
+
+
